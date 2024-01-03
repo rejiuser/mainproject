@@ -253,26 +253,29 @@
         <h4></h4>
     </div>
 </div> -->
-
+<div class="container-fluid">
 <div style="background-image:url('images/kit3.avif');background-size:cover;height:100vh;width:100%">
     <!-- <img src="images/kit2.avif" alt="" style="background-size:cover;position:absolute;z-index:-1"> -->
     <h1 class="text-center " style="font-size:50px;font-family: 'Roboto', sans-serif;position:absolute;margin-top:457px;">The ultimate<br>kitchen utensils
 <input type="submit" value="Explore" name="sub" id="kit" class="btn btn-danger">    
 </h1>
     </div>
+    </div>
 <!-- container3div -->
 <!-- </div> -->
 <div>
     <marquee behavior="alternate" direction="right" style="font-size:30px;font-weight:500"><span class="text-danger">Hurry!!!!</span> Christmas Special Deal-<span class="text-primary">50%Off</span> on christmas decor !!!!!</marquee>
 </div>
+<div class="container-fluid">
 <div style="background-image:url('images/chris11.avif');height:100vh;width:98.5%;background-size:cover;position:absolute;z-index:-1">
 <!-- <img src="images/chris11.avif" style="height:100vh;width:100%;background-size:cover;position:absolute;z-index:-1"> -->
-<h1 style="margin-top:124px;font-size:;color:white;position:absolute;font-family: 'Roboto', sans-serif;margin-left:844px">upto 60% off on<br>furnitures</h1>
-<a href=""><span  style="margin-top:231px;margin-left:950px" class="btn btn-primary h-3 w-3">Shop</span></a>
+<h1 style="margin-top:124px;font-size:;color:white;position:absolute;font-family: 'Roboto', sans-serif;margin-left:250px">upto 60% off on<br>furnitures</h1>
+<a href=""><span  style="margin-top:231px;margin-left:250px" class="btn btn-primary h-3 w-3">Shop</span></a>
 </div>
 
-
+</div>
 <!-- <div class="container-fluid"> -->
+    <div class="container-fluid">
     <div style="margin-top:650px">
     <h2>About Us</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, aperiam quos. Quos officia cupiditate pariatur consequuntur, animi maiore</p>
@@ -284,6 +287,7 @@
     {
         var name=$('#p').hide();
     }
+    
     )
     $('#id1').click(function()
     {
@@ -317,6 +321,7 @@
 
     <p class="p-5 text-center">copyright@newproject_laravel 2023</p>
 
+</div>
 </div>
 <!-- container4div -->
 <!-- </div> -->
