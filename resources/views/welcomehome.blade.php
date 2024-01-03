@@ -75,15 +75,15 @@
     <body>
             <div class="container-fluid" >
 
-        <div class="border bg-black">
-            <marquee style="color:white" behavior="alternate" direction="left">
+        <div class="border bg-black fixed-top">
+            <marquee style="color:white" behavior="alternate" direction="left" >
              Free World Wide Shipping as usual...
              </marquee>
             </div>
         <div>
             <h1 class="text-center pt-3" style=" font-family: 'Roboto', sans-serif;"><span style="color:red">Zay</span>&Com</h1>
         </div>
-    <div class="navbar navbar-expand-lg navbar-dark  border " style="background-color:ghostwhite">
+    <div class="navbar navbar-expand-lg navbar-dark  border  " style="background-color:ghostwhite">
 <div class="container-fluid">
     <a href="#" class="navbar-brand"></a>
 <ul class="navbar-nav" style="margin-right:466px">
@@ -287,7 +287,7 @@
     {
         var name=$('#p').hide();
     }
-    
+
     )
     $('#id1').click(function()
     {

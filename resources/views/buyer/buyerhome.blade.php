@@ -89,6 +89,7 @@
     </style>
     </head>
     <body>
+        <div class="container-fluid">
     <div class="border bg-black">
             <marquee style="color:white" behavior="alternate" direction="left">
              Free World Wide Shipping as usual...
@@ -152,8 +153,8 @@
 
 </div>
     </div>
-
-
+<!-- containerdiv -->
+    </div>
 
 
 
@@ -203,7 +204,7 @@
 
 
     <!-- </ul> -->
-  
+  <div class="container-fluid">
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -242,9 +243,10 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-
-<div class="row p-5" style="margin-top:;background-image:url('images/chris8.avif');background-size:cover;height:100vh;">
+<!-- container2div -->
+</div>
+<div class="container-fluid">
+<div class="row p-5" style="">
     <div class="col-md-4 " >
         <img src="images/dis.jpg" height="100" width="100" alt="" style="margin-left:0px">
        <h3>Special Discount</h3>
@@ -265,7 +267,9 @@
 </div>
 
 </div>
-
+<!-- container3 -->
+</div>
+<div class="container-fluid">
 <div style="background-image:url('images/kit3.avif');background-size:cover;height:100vh;width:100%">
     <!-- <img src="images/kit2.avif" alt="" style="background-size:cover;position:absolute;z-index:-1"> -->
     <h1 class="text-center " style="font-size:50px;font-family: 'Roboto', sans-serif;position:absolute;margin-top:457px;">The ultimate<br>kitchen utensils
@@ -282,48 +286,9 @@
 <h1 style="margin-top:124px;font-size:;color:white;position:absolute;font-family: 'Roboto', sans-serif;margin-left:844px">upto 60% off on<br>furnitures</h1>
 <a href=""><span  style="margin-top:231px;margin-left:950px" class="btn btn-primary h-3 w-3">Shop</span></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-
-
+<!-- container5 -->
+</div>
+<div class="container-fluid">
 <div style="margin-top:650px">
     <h2>About Us</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores, aperiam quos. Quos officia cupiditate pariatur consequuntur, animi maiore</p>
@@ -348,8 +313,8 @@
     <p class="p-5 text-center">copyright@newproject_laravel 2023</p>
 
 </div>
-
-
+<!-- container6div -->
+</div>
     </body>
 </html>
 
