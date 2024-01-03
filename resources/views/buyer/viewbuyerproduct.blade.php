@@ -57,9 +57,9 @@ color:red;
 
 </ul>
 </li> -->
-<li class="nav-items">
+<!-- <li class="nav-items">
     <a href="{{url('buyer')}}" class="nav-link " >Register</a>
-</li>
+</li> -->
 <li class="nav-items">
     <a href="{{url('viewbuyerprofile')}}" class="nav-link ">Account</a>
 </li>
