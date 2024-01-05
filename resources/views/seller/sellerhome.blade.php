@@ -20,9 +20,12 @@
             margin-top:5px;
             margin-right:10px;
             margin-left:10px;
+            color:black;
+            transition:transform 0.3s;
         }
         .nav-link:hover{
-         background-color:white;
+         color:darkcyan;
+         
          
         }
         .welcome{
@@ -36,12 +39,10 @@
         }
         .main
         {
-            background-image:url('images/g8.jpeg');
-            background-size:100% 100%;
-            height:100vh;
-            
-            /* width:100%; */
-            
+            background-image:url('images/sofa.avif');
+            background-size:cover;
+            background-position:center;
+            height:100vh;            
 
         }
         /* .new
@@ -59,7 +60,22 @@
         .btn:hover{
             background-color:darkcyan;
         }
-      
+      @keyframes slideInLeft{
+        from{
+            transform:translateX(-40px);
+        }
+        to{
+            transform:translateX(0);
+        }
+
+      }
+      .header{
+        animation:slideInLeft  3s ease-in 1s 100 normal;
+
+      }
+      .head{
+     animation:slideInLeft 3s ease-in 1s 100 normal;
+      }
     </style>
     </head>
     <body>
@@ -69,12 +85,12 @@
 
 <ul class="navbar-nav">
     <li class="navbar-items">
-        <a href="{{url('sellerhome')}}" class="nav-link active" style="color:chocolate">Home</a>
+        <a href="{{url('sellerhome')}}" class="nav-link" >Home</a>
     </li>
     <li class="navbar-items dropdown">
-        <a href="{{url('viewprofile')}}" class="nav-link dropdown-toggle text-black" data-bs-toggle="dropdown">{{session('username')}}</a>
+        <a href="{{url('viewprofile')}}" class="nav-link dropdown-toggle " data-bs-toggle="dropdown">{{session('username')}}</a>
 <ul class="dropdown-menu">
-<a href="{{url('changepasswordseller')}}" class="dropdown-item text-black" style="background-color:darkcyan;">Change Password</a>
+<a href="{{url('changepasswordseller')}}" class="dropdown-item " style="background-color:darkcyan;">Change Password</a>
 <a href="{{url('logoutseller')}}" class="dropdown-item text-white" style="background-color:darkcyan;">Logout</a>
 </ul>
 
@@ -82,19 +98,19 @@
 
     </li>
     <li class="navbar-items">
-        <a href="{{url('viewprofile')}}" class="nav-link text-black">My Account</a>
+        <a href="{{url('viewprofile')}}" class="nav-link ">My Account</a>
     </li>
 <li class="navbar-items">
-    <a href="{{url('addproduct')}}"  class="nav-link text-black" style="">Add Products</a>
+    <a href="{{url('addproduct')}}"  class="nav-link " style="">Add Products</a>
 </li>
 <li class="navbar-items">
-    <a href="{{url('viewproduct')}}" class="nav-link text-black">View Products</a>
+    <a href="{{url('viewproduct')}}" class="nav-link ">View Products</a>
 </li>
 <li class="navbar-items">
-    <a href="{{url('vieworders')}}" class="nav-link text-black">View Orders</a>
+    <a href="{{url('vieworders')}}" class="nav-link ">View Orders</a>
 </li>
 <li class="navbar-items">
-    <a href="{{url('logoutseller')}}" class="nav-link text-black">Logout</a>
+    <a href="{{url('logoutseller')}}" class="nav-link ">Logout</a>
 </li>
 </ul>
             </div>
@@ -110,8 +126,8 @@
 
     
     <div style="position:absolute;bottom:179px;left:751px;">
-    <p style="font-size:80px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="fw-bold">Welcome</p>
-           <h4 style="font-size:50px;color:cadetblue" class="text-center fw-bold"><?php echo session('username');?></h4>
+    <p style="font-size:80px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="fw-bold header">Welcome</p>
+           <h4 style="font-size:50px;color:cadetblue" class="text-center fw-bold head"><?php echo session('name');?></h4>
     </div>
 
 <!-- <div>   

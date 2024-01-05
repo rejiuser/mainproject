@@ -29,6 +29,14 @@
         .search{
         background-color:ghostwhite;
      }
+     /* .button{
+        transition: transform 0.3s;
+     }
+     .button:hover{
+        background-color:pink;
+        color:black;
+        transform: translateY(-10px);
+     } */
     </style>
     </head>
     <div class="border bg-black">
@@ -129,7 +137,7 @@
 
        
        @if($value['Status']=='Approved')
-        <tr><td><a href="{{url('trackproduct',$value['Order_id'])}}">Track Product</a></td></tr>
+        <tr><td><a href="{{url('trackproduct',$value['Order_id'])}}"><span class=" button btn btn-success">Track Product</span></a></td></tr>
         @endif
     </table>
 

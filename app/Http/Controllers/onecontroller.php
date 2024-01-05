@@ -57,8 +57,12 @@ public function login(Request $request)
     $data=onemodel::where('UserName',$user)->where('Password',$pass)->first(); 
     if($data)
     {
-        $request->session()->put('username',$user);
         $id=$data->id;
+        $email=$data->Email;
+        $name=$data->Name;
+        $request->session()->put('username',$user);
+        $request->session()->put('email',$email);
+        $request->session()->put('name',$name);
         $request->session()->put('id',$id);
         return redirect('home');
     }
@@ -69,6 +73,8 @@ public function login(Request $request)
         {
             $request->session()->put('username',$user);
             $id=$dat->id;
+            $name=$dat->Name;
+            $request->session()->put('name',$name);
             $request->session()->put('id',$id);
           return redirect('sellerhome');
         }

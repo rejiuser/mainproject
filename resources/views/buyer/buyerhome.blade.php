@@ -86,6 +86,14 @@
                 margin-left:25px;
             }
         }
+        /* .button{
+            transition:transform 0.3s;
+        }
+        .button:hover{
+            transform:translateY(-10px);
+            background-color:yellow;
+        } */
+ 
     </style>
     </head>
     <body>
@@ -110,7 +118,7 @@
     </li>
 
     <li class="nav-items dropdown">
-<a href="{{url('login')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{session('username')}}</a>
+<a href="{{url('login')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{session('userzname')}}</a>
 <ul class="dropdown-menu">
    
 <a href="{{url('changepassword')}}" class="dropdown-item ">change Password</a>
@@ -248,7 +256,7 @@
 <div class="container-fluid">
 <div class="row p-5" style="">
     <div class="col-md-4 " >
-        <img src="images/dis.jpg" height="100" width="100" alt="" style="margin-left:0px">
+        <img src="images/dis.jpg" height="100" width="100" alt="" style="margin-left:0px" class="img">
        <h3>Special Discount</h3>
        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam porro perspiciatis odio vero molestias, accusamus rati</p>
     </div>
@@ -284,7 +292,7 @@
 <div style="background-image:url('images/chris11.avif');height:100vh;width:98.5%;background-size:cover;position:absolute;z-index:-1">
 <!-- <img src="images/chris11.avif" style="height:100vh;width:100%;background-size:cover;position:absolute;z-index:-1"> -->
 <h1 style="margin-top:124px;font-size:;color:white;position:absolute;font-family: 'Roboto', sans-serif;margin-left:844px">upto 60% off on<br>furnitures</h1>
-<a href=""><span  style="margin-top:231px;margin-left:950px" class="btn btn-primary h-3 w-3">Shop</span></a>
+<a href=""><span  style="margin-top:231px;margin-left:950px" class="button btn btn-primary h-3 w-3">Shop</span></a>
 </div>
 <!-- container5 -->
 </div>

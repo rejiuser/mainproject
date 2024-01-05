@@ -107,21 +107,22 @@
 
         </div>
         
-<div class="header" style="background-image:url('images/ad3.avif');height:65vh;width:100%;position:absolute;opacity:0.9;z-index:-1;background-size:cover;">
+<div class="header" style="background-image:url('images/ad3.avif');height:100vh;width:100%;position:absolute;opacity:0.9;z-index:-1;background-size:cover;">
 </div>
 <div>
 <p class="text-white " style="margin-top:143px;margin-left:79px;font-size:30px;line-height:3px">Better Your</p>
     <h1 style="margin-left:79px;font-size:50px" class="text-white fw-bold">ECommerce</h1>
     <p class="text-warning" style="margin-left:79px;font-size:23px" >Easier For You</p>
+    <p><?php echo session('name');?></p>
     </div>  
-    <div class="container" style="posiyion:relative">
+    <!-- <div class="container" style="posiyion:relative">
         <div style="margin-top:300px;">
             <h1 class="text-center">Socially and Environmentally</h1>
                 <h1 class="text-center">Progressive Products
                 
             </h1>
         </div>
-    </div>
+    </div> -->
         
         
 

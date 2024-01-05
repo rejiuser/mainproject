@@ -43,12 +43,6 @@
              Free World Wide Shipping as usual...
              </marquee>
             </div> 
-
-
-
-
-
-
     <div class="navbar navbar-expand-sm navbar-dark" style="">
  <div class="container-fluid">
     <a href="#" class="navbar-brand fw-bold"></a>
@@ -67,9 +61,9 @@
 
 </ul>
 </li> -->
-<li class="nav-items">
+<!-- <li class="nav-items">
     <a href="{{url('buyer')}}" class="nav-link " >Register</a>
-</li>
+</li> -->
 <li class="nav-items">
     <a href="{{url('viewbuyerprofile')}}" class="nav-link active" style="color:red" >Account</a>
 </li>
