@@ -113,7 +113,7 @@
 <p class="text-white " style="margin-top:143px;margin-left:79px;font-size:30px;line-height:3px">Better Your</p>
     <h1 style="margin-left:79px;font-size:50px" class="text-white fw-bold">ECommerce</h1>
     <p class="text-warning" style="margin-left:79px;font-size:23px" >Easier For You</p>
-    <p><?php echo session('name');?></p>
+    <!-- <p><?php echo session('name');?></p> -->
     </div>  
     <!-- <div class="container" style="posiyion:relative">
         <div style="margin-top:300px;">

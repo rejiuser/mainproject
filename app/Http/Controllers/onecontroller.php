@@ -74,7 +74,7 @@ public function login(Request $request)
             $request->session()->put('username',$user);
             $id=$dat->id;
             $name=$dat->Name;
-            $request->session()->put('name',$name);
+            // $request->session()->put('name',$name);
             $request->session()->put('id',$id);
           return redirect('sellerhome');
         }
@@ -779,11 +779,13 @@ if($data)
 {
     $datas=array('Password'=>$new);
     regmodel::where('id',$sess)->update($datas);
+    return back()->with('message','Password changed successfully');
 
 }
 else
 {
     return back()->with('error','Current Password is Invalid');
+    
 }
 }
 

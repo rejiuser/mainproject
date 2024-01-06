@@ -127,7 +127,7 @@
     
     <div style="position:absolute;bottom:179px;left:751px;">
     <p style="font-size:80px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="fw-bold header">Welcome</p>
-           <h4 style="font-size:50px;color:cadetblue" class="text-center fw-bold head"><?php echo session('name');?></h4>
+           <h4 style="font-size:50px;color:cadetblue" class="text-center fw-bold head"><?php echo session('username');?></h4>
     </div>
 
 <!-- <div>   
