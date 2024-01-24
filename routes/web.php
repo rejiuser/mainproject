@@ -121,8 +121,10 @@ Route::get('vieworderadmi',[onecontroller::class,'vieworderadmi']);
 Route::get('orderdetailsadmi/{id}',[onecontroller::class,'orderdetailsadmi']);
 
 Route::get('logoutseller',[onecontroller::class,'logoutseller']);
-Route::get('stripe',[onecontroller::class,'cartproceedinsert']);
-Route::post('stripepost',[onecontroller::class,'stripepost']);
+// Route::get('stripe',[onecontroller::class,'cartproceedinsert']);
+// Route::post('stripepost',[onecontroller::class,'stripepost']);
+Route::post('stripe',[onecontroller::class,'stripe']);
+Route::post('stripepost',[onecontroller::class,'stripePost'])->name('stripepost');
 
 
 
@@ -163,6 +165,7 @@ Route::get('text',[ajaxcontroller::class,'searchbtn']);
 
 
 Route::get('extra',[onecontroller::class,'extra']);
+
 
 
 

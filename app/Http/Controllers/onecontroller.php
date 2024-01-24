@@ -74,7 +74,10 @@ public function login(Request $request)
             $request->session()->put('username',$user);
             $id=$dat->id;
             $name=$dat->Name;
-            // $request->session()->put('name',$name);
+            $em=$dat->Email;
+            $request->session()->put('email',$em);
+
+            $request->session()->put('name',$name);
             $request->session()->put('id',$id);
           return redirect('sellerhome');
         }
@@ -83,6 +86,10 @@ public function login(Request $request)
        $datas=buyermodel::where('Username',$user)->where('Password',$pass)->where('Status','Approved')->first();
      if($datas)
      {
+        $name=$datas->First_name;
+        $request->session()->put('name',$name);
+        $email=$datas->Email;
+        $request->session()->put('email',$email);
         $request->session()->put('username',$user);
         $id=$datas->id;
         $request->session()->put('id',$id);
@@ -954,54 +961,54 @@ public function logoutseller(Request $request)
 
     return redirect('login');
 }
-public function stripepost(Request $request)
-{
-   $sess=$request->session()->get('id');
-    $total=$request->input('total');
+// public function stripepost(Request $request)
+// {
+//    $sess=$request->session()->get('id');
+//     $total=$request->input('total');
     
 
-    Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-    Stripe\Charge::create ([
+//     Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+//     Stripe\Charge::create ([
 
-        "amount" => $total * 100,
+//         "amount" => $total * 100,
 
-        "currency" => "usd",
+//         "currency" => "usd",
 
-        "customer" => 1,
+//         "customer" => 1,
 
-        "description" => "Test payment from itsolutionstuff.com.",
+//         "description" => "Test payment from itsolutionstuff.com.",
 
-        "shipping" => [
+//         "shipping" => [
 
-          "name" => "Jenny Rosen",
+//           "name" => "Jenny Rosen",
 
-          "address" => [
+//           "address" => [
 
-            "line1" => "510 Townsend St",
+//             "line1" => "510 Townsend St",
 
-            "postal_code" => "98140",
+//             "postal_code" => "98140",
 
-            "city" => "San Francisco",
+//             "city" => "San Francisco",
 
-            "state" => "CA",
+//             "state" => "CA",
 
-            "country" => "US",
+//             "country" => "US",
 
-          ],
+//           ],
 
-        ]
+//         ]
 
-]); 
+// ]); 
 
 
 
-Session::flash('success', 'Payment successful!');
+// Session::flash('success', 'Payment successful!');
 
        
 
-return back();
+// return back();
 
-}
+// }
 
 
 public function trackingdetails($id)
@@ -1064,6 +1071,7 @@ public function welcomehomeprodetails($id)
     $data=addproductmodel::join('categoryadd_tb','categoryadd_tb.id','=','addproduct_tb.Category')->join('subcategory_tb','subcategory_tb.id','=','addproduct_tb.Subcategory')->select('addproduct_tb.*','categoryadd_tb.*','subcategory_tb.*','subcategory_tb.id as sid')->where('addproduct_tb.id',$id)->first();
     return view('welcomehomeprodetails',['result'=>$data]);
 }
+
 // public function addcarthome(Request $request)
 // {
 //     $sess=$request->session()->get('id');
@@ -1088,6 +1096,33 @@ public function welcomehomeprodetails($id)
 
 
 
+public function stripe(Request $request)
+{
+    $total=$request->input('total');
+    return view('stripe',['total'=>$total]);
+}
+  
+/**
+ * success response method.
+ *
+ * @return \Illuminate\Http\Response
+ */
+public function stripePost(Request $request)
+{
+    Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    $total=$request->input('total');
+    Stripe\Charge::create ([
+            "amount" => $total * 100,
+            "currency" => "usd",
+            "source" => $request->stripeToken,
+            "description" => "Test payment from itsolutionstuff.com." 
+    ]);
+          return redirect('viewcart');
+   // return back()->with('success', 'Payment successful!');
+    //request->session()->flash('success', 'Payment successful!');
+
+        //return redirect()->route('payment.success');
+}
 
 }
 

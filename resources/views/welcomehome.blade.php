@@ -319,7 +319,7 @@
 
 <div class="footer bg-black" style="margin-top:;">
 
-    <p class="p-5 text-center">copyright@newproject_laravel 2023</p>
+    <p class="p-5 text-center">copyright@mainproject_laravel 2024</p>
 
 </div>
 </div>

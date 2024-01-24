@@ -118,7 +118,7 @@
     </li>
 
     <li class="nav-items dropdown">
-<a href="{{url('login')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{session('userzname')}}</a>
+<a href="{{url('login')}}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{session('name')}}</a>
 <ul class="dropdown-menu">
    
 <a href="{{url('changepassword')}}" class="dropdown-item ">change Password</a>
